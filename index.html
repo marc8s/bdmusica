@@ -31,31 +31,33 @@
 			</div>
 		</nav>
 		<div id="main" class="container-fluid">
-			<h3 class="page-header">Editar Item</h3>
-			<form action="index.html"> <!--action diz respeito ao fluxo da página, substituir depois pelo correto provavelmente um script de back-end-->
-				<!-- area de campos do form -->
-				<div class="row">
-					<div class="form-group col-md-4">
-					   <label for="campo1">Campo Um</label>
-					   <input type="text" class="form-control" id="campo1">
-					</div>					 
-					<div class="form-group col-md-4">
-					   <label for="campo2">Campo Dois</label>
-					   <input type="text" class="form-control" id="campo3">
+			<!--<h3 class="page-header">Página Inicial</h3> -->
+			<div id="top" class="row">
+				<div class="col-md-3">
+					<h2>Itens</h2>
+				</div>			 
+				<div class="col-md-6"><!--implementar requisição de busca com ajax-->
+					<div class="input-group h2">
+						<input name="data[search]" class="form-control" id="search" type="text" placeholder="Pesquisar Itens">
+						<span class="input-group-btn">
+							<button class="btn btn-primary" type="submit">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
 					</div>
-					<div class="form-group col-md-4">
-					   <label for="campo3">Campo Três</label>
-					   <input type="text" class="form-control" id="campo3">
-					</div>
+				</div>			 
+				<div class="col-md-3">
+					<a href="add.html" class="btn btn-primary pull-right h2">Novo Item</a>
 				</div>
-				<hr />
-				<div id="actions" class="row">
-					<div class="col-md-12">
-						<button type="submit" class="btn btn-primary">Salvar</button>
-						<a href="index.html" class="btn btn-default">Cancelar</a>
-					</div>
-				</div>
-			</form>
+			</div> <!-- /#top -->
+			<hr />
+			<div id="list" class="row">
+			
+			</div> <!-- /#list -->
+		 
+			<div id="bottom" class="row">
+			 
+			</div> <!-- /#bottom -->
 		</div>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
