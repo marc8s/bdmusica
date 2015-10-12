@@ -13,7 +13,7 @@ include_once("connect.php");
 		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>		
-		<!-- Modal -->
+		<!-- Modal 
 		<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
@@ -28,7 +28,7 @@ include_once("connect.php");
 					</div>
 				</div>
 			</div>
-		</div><!--fim modal-->
+		</div>fim modal-->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -99,13 +99,13 @@ include_once("connect.php");
 									<td class="actions">
 										<a class="btn btn-success btn-xs" href="view.php?id=<?php echo $row->Identificador; ?>">Visualizar</a> 
 										<a class="btn btn-warning btn-xs" href="edit.php?id=<?php echo $row->Identificador; ?>">Editar</a> 
-										<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+										<a class="btn btn-danger btn-xs"  href="del.php?id=<?php echo $row->Identificador; ?>">Excluir</a>
 									</td>
 									<?php
 									
 								echo "</tr>";								
 							}
-							$conexao->close();
+							//$conexao->close();
 							?>
 						</tbody>
 					</table>

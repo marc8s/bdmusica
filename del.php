@@ -13,7 +13,7 @@ $row = $result->fetch_object();
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>CRUD com Bootstrap 3</title>		 
+		<title>Deletar Item</title>		 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
@@ -30,12 +30,12 @@ $row = $result->fetch_object();
 			Deseja realmente excluir este item?
 		  </div>
 		  <div class="modal-footer">
-			<button type="button" class="btn btn-primary">Sim</button>
-	 <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
+			<button type="button" class="btn btn-primary">Sim</button><!--implementar javascript para realizar exclusão , back-end-->
+	<!-- <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
 		  </div>
 		</div>
 	  </div>
-	</div>  /.modal -->
+	</div> <!-- /.modal -->
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -58,7 +58,7 @@ $row = $result->fetch_object();
 			</div>
 		</nav>
 		<div id="main" class="container-fluid">
-			<h3 class="page-header">Visualizar Item</h3>
+			<h3 class="page-header">Deseja realmente excluir esse item?</h3>
 			<div class="row">
 				<div class="col-md-4">
 					<p><strong>Identificador</strong></p>
@@ -82,9 +82,9 @@ $row = $result->fetch_object();
 			<hr />
 			<div id="actions" class="row">
 				<div class="col-md-12">
-					<a href="index.php" class="btn btn-success">Voltar</a>
+					<a href="index.php" class="btn btn-success">Cancelar</a>
 					<a href="edit.php?id=<?php echo $row->Identificador; ?>" class="btn btn-primary">Editar</a>					
-					<a class="btn btn-danger"  href="del.php?id=<?php echo $row->Identificador; ?>">Excluir</a>
+					<a href="delete.php?id=<?php echo $row->Identificador; ?>" class="btn btn-default btn-danger">Excluir</a>
 				</div>
 			</div>
 		</div>

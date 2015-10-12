@@ -10,12 +10,14 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Parte 6 - Inserção de dados na base de dados pelo formulário de adição
 * Parte 7 - Listagem de dados da base de dados na pagina inicial
 * Parte 8 - Edição de dados da base de dados
-* Parte 9 - Vizualização de item selecionado na base de dados
+* Parte 9 - Visualização de item selecionado na base de dados
+* Parte 10 - Exclusão do banco de dados
 
 # TO DO 
-* Campos do formulário
-* Comunicação com o banco de dados
+* Colocar campos corretos do formulário 
+* Conectar com o banco de dados online
 * Calculo de paginas da paginação da pagina inicial
+* Implementar buscas
 
 #DOING
 
