@@ -42,7 +42,7 @@ include_once("connect.php");
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">Início</a></li>
+						<li><a href="index.php">Início</a></li>
 						<li><a href="#">Opções</a></li>
 						<li><a href="#">Perfil</a></li>
 						<li><a href="#">Ajuda</a></li>
@@ -96,13 +96,14 @@ include_once("connect.php");
 									echo "<td>".$row->Cidade."</td>";
 									echo "<td>".$row->Telefone."</td>";
 									echo '<td class="actions">';
-										echo '<a class="btn btn-success btn-xs" href="view.html">Visualizar</a>';
-										echo '<a class="btn btn-warning btn-xs" href="edit.html">Editar</a>';
+										echo '<a class="btn btn-success btn-xs" href="view.html">Visualizar</a> ';
+										echo '<a class="btn btn-warning btn-xs" href="edit.html">Editar</a> ';
 										echo '<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>';
 									echo "</td>";
 									
-								echo "</tr>";
+								echo "</tr>";								
 							}
+							$conexao->close();
 							?>
 						</tbody>
 					</table>
