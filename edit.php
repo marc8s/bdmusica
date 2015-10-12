@@ -1,7 +1,7 @@
 <?php
 $id = $_GET['id'];
 include_once("connect.php");
-//Execulta consulta
+//Executa consulta
 $result = $conexao->query("SELECT * FROM musicanaescola WHERE identificador = '$id' LIMIT 1"); 
 $row = $result->fetch_object();
 
