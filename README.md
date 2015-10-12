@@ -14,5 +14,7 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Campos do formulário
 * Comunicação com o banco de dados
 * Calculo de paginas da paginação da pagina inicial
-* Corrigir redirecionamento após editar novo item
+
+#DOING
+* Parte 8 - Edição de dados da base de dados
 

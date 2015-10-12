@@ -95,11 +95,13 @@ include_once("connect.php");
 									echo "<td>".$row->Escola."</td>";
 									echo "<td>".$row->Cidade."</td>";
 									echo "<td>".$row->Telefone."</td>";
-									echo '<td class="actions">';
-										echo '<a class="btn btn-success btn-xs" href="view.html">Visualizar</a> ';
-										echo '<a class="btn btn-warning btn-xs" href="edit.html">Editar</a> ';
-										echo '<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>';
-									echo "</td>";
+									?>
+									<td class="actions">
+										<a class="btn btn-success btn-xs" href="view.html">Visualizar</a> 
+										<a class="btn btn-warning btn-xs" href="edit.php?id=<?php echo $row->Identificador; ?>">Editar</a> 
+										<a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>
+									</td>
+									<?php
 									
 								echo "</tr>";								
 							}
