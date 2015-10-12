@@ -9,6 +9,7 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Parte 5 - Página de listagem(permite acessar as telas de CRUD) 
 * Parte 6 - Inserção de dados na base de dados pelo formulário de adição
 * Parte 7 - Listagem de dados da base de dados na pagina inicial
+* Parte 8 - Edição de dados da base de dados
 
 # TO DO 
 * Campos do formulário
@@ -16,5 +17,5 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Calculo de paginas da paginação da pagina inicial
 
 #DOING
-* Parte 8 - Edição de dados da base de dados
+
 

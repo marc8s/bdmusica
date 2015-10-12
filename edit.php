@@ -41,26 +41,26 @@ $row = $result->fetch_object();
 		</nav>
 		<div id="main" class="container-fluid">
 			<h3 class="page-header">Editar Item</h3>
-			<form action="index.html"> <!--action diz respeito ao fluxo da página, substituir depois pelo correto provavelmente um script de back-end-->
+			<form method="post" action="update.php"> <!--action diz respeito ao fluxo da página, substituir depois pelo correto provavelmente um script de back-end-->
 				<!-- area de campos do form -->
 				<div class="row">
 					<div class="form-group col-md-4">
 					   <label for="campo1">Identificador</label>
-					   <input type="text" class="form-control" id="campo1" value="<?php echo $row->Identificador; ?>">
+					   <input type="text" class="form-control" id="campo1" name="campo1" value="<?php echo $row->Identificador; ?>">
 					</div>					 
 					<div class="form-group col-md-4">
 					   <label for="campo2">Escola</label>
-					   <input type="text" class="form-control" id="campo2" value="<?php echo $row->Escola; ?>">
+					   <input type="text" class="form-control" id="campo2" name="campo2" value="<?php echo $row->Escola; ?>">
 					</div>
 					<div class="form-group col-md-4">
 					   <label for="campo3">Cidade</label>
-					   <input type="text" class="form-control" id="campo3" value="<?php echo $row->Cidade; ?>">
+					   <input type="text" class="form-control" id="campo3" name="campo3" value="<?php echo $row->Cidade; ?>">
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-group col-md-4">
 					   <label for="campo4">Telefone</label>
-					   <input type="text" class="form-control" id="campo4" value="<?php echo $row->Telefone; ?>">
+					   <input type="text" class="form-control" id="campo4" name="campo4" value="<?php echo $row->Telefone; ?>">
 					</div>	
 				</div>
 				<hr />
