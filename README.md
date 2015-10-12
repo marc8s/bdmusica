@@ -8,8 +8,10 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Parte 4 - Popup de exclusão (equivalente ao Delete) 
 * Parte 5 - Página de listagem(permite acessar as telas de CRUD) 
 * Parte 6 - Inserção de dados na base de dados pelo formulário de adição
+* Parte 7 - Listagem de dados da base de dados na pagina inicial
 
 # TO DO 
 * Campos do formulário
 * Comunicação com o banco de dados
+* Calculo de paginas da paginação da pagina inicial
 
