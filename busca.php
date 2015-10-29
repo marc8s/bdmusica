@@ -3,11 +3,14 @@ $id = $_POST['search'];
 include_once("connect.php");
 //Executa consulta
 $result = $conexao->query("SELECT * FROM musicanaescola WHERE escola = '$id' LIMIT 1"); 
-$row = $result->fetch_object();
+$linhas = $result->num_rows;
 
-?>
-
-<!DOCTYPE html>
+if($linhas == 0){
+	$url = 'mensagemErroBusca.html';
+	echo'<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$url.'">';
+}else{
+	$row = $result->fetch_object(); ?>
+	<!DOCTYPE html>
 <html lang="pt-br">
 	<head>
 		<meta charset="utf-8">
@@ -17,25 +20,7 @@ $row = $result->fetch_object();
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 	</head>
-	<body> 
-	<!-- Modal 
-	<div class="modal fade" id="delete-modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-	  <div class="modal-dialog" role="document">
-		<div class="modal-content">
-		  <div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Fechar"><span aria-hidden="true">&times;</span></button>
-			<h4 class="modal-title" id="modalLabel">Excluir Item</h4>
-		  </div>
-		  <div class="modal-body">
-			Deseja realmente excluir este item?
-		  </div>
-		  <div class="modal-footer">
-			<button type="button" class="btn btn-primary">Sim</button>
-	 <button type="button" class="btn btn-default" data-dismiss="modal">N&atilde;o</button>
-		  </div>
-		</div>
-	  </div>
-	</div>  /.modal -->
+	<body> 	
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -92,3 +77,10 @@ $row = $result->fetch_object();
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
+<?php }
+
+
+
+
+?>
+

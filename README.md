@@ -12,14 +12,13 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Parte 8 - Edição de dados da base de dados
 * Parte 9 - Visualização de item selecionado na base de dados
 * Parte 10 - Exclusão do banco de dados
+* Parte 11 - Buscas no Banco de dados
 
 # TO DO 
 * Colocar campos corretos do formulário 
 * Conectar com o banco de dados online
 * Calculo de paginas da paginação da pagina inicial
-* Implementar buscas
-* Tratamento para o caso de não encontrar nenhum resultado pra busca
 
 #DOING
-* Parte 11 - Buscas no Banco de dados
+
 
