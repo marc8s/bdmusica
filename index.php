@@ -76,7 +76,9 @@ include_once("connect.php");
 			//****************************************
 			// Monta outra consulta MySQL, agora a que fará a busca com paginação
 			$resultado = $conexao->query("SELECT * FROM musicanaescola LIMIT $offset, $por_pagina");
-			
+			// Número máximos de botões de paginação 
+			$max_links = 3;
+
 			?>
 			<div id="list" class="row">
 				<div class="table-responsive col-md-12">
@@ -128,10 +130,22 @@ include_once("connect.php");
 					</ul><!-- /.pagination -->
 					<?php
 					if ($linhas > 0) {
-						echo '<ul class="pagination">';						
+						echo '<ul class="pagination">';	
+						if($pagina != 1){
+							$anterior = $pagina - 1;
+						}else{
+							$anterior = $pagina;
+						}
+						echo "<li><a href='index.php?pagina={$anterior}'>Anterior</a></li>";							
 						for ($n = 1; $n <= $paginas; $n++) {
 							echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";							
-					  }
+						}
+						if($pagina < $paginas){
+							$proximo = $pagina + 1;
+						}else{
+							$proximo = $pagina;
+						}
+						echo "<li><a href='index.php?pagina={$proximo}'>Próximo</a></li>";		
 					}
 					echo "</ul><!-- /.pagination -->";
 					?>
