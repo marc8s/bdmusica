@@ -58,12 +58,25 @@ include_once("connect.php");
 			</div> <!-- /#top -->
 			<hr />
 			<?php 
-			$resultado = $conexao->query("SELECT * FROM musicanaescola");
-			$linhas = $resultado->num_rows;
 			//registros por pagina
 			$por_pagina = 8;
+			$resultado = $conexao->query("SELECT * FROM musicanaescola");
+			$linhas = $resultado->num_rows;			
 			//calcula o máximo de páginas
 			$paginas =  (($linhas % $por_pagina) > 0) ? (int)($linhas / $por_pagina) + 1 : ($linhas / $por_pagina);
+			
+			//****************************************
+			if (isset($_GET['pagina'])) {
+			  $pagina = (int)$_GET['pagina'];
+			} else {
+			  $pagina = 1;
+			}
+			$pagina = max(min($paginas, $pagina), 1);
+			$offset = ($pagina - 1) * $por_pagina;
+			//****************************************
+			// Monta outra consulta MySQL, agora a que fará a busca com paginação
+			$resultado = $conexao->query("SELECT * FROM musicanaescola LIMIT $offset, $por_pagina");
+			
 			?>
 			<div id="list" class="row">
 				<div class="table-responsive col-md-12">
