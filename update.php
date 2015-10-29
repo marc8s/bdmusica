@@ -7,10 +7,9 @@ $identificador = $_POST['campo1'];
 $telefone = $_POST['campo4'];
 
 $sql = "UPDATE musicanaescola set Escola ='$escola', Cidade ='$cidade', Identificador= '$identificador', Telefone='$telefone' WHERE Identificador = $identificador";
-//$sql .= "( Escola ='$escola', Cidade ='$cidade', Identificador= '$identificador', Telefone='$telefone')";
 $conexao->query($sql);
 $conexao->close();
-//include("index.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

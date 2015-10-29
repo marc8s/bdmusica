@@ -60,6 +60,10 @@ include_once("connect.php");
 			<?php 
 			$resultado = $conexao->query("SELECT * FROM musicanaescola");
 			$linhas = $resultado->num_rows;
+			//registros por pagina
+			$por_pagina = 8;
+			//calcula o máximo de páginas
+			$paginas =  (($linhas % $por_pagina) > 0) ? (int)($linhas / $por_pagina) + 1 : ($linhas / $por_pagina);
 			?>
 			<div id="list" class="row">
 				<div class="table-responsive col-md-12">
@@ -101,7 +105,7 @@ include_once("connect.php");
 		 
 			<div id="bottom" class="row">
 				<div class="col-md-12">
-				<!--A quantidade de páginas depende de um cálculo sobre a quantidade de registros-->
+				<!--A quantidade de páginas depende de um cálculo sobre a quantidade de registros-->				
 					<ul class="pagination"><!--fazer os links href com back-end-->
 						<li class="disabled"><a>&lt; Anterior</a></li>
 						<li class="disabled"><a>1</a></li>
