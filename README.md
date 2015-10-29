@@ -18,7 +18,8 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Conectar com o banco de dados online
 * Calculo de paginas da paginação da pagina inicial
 * Implementar buscas
+* Tratamento para o caso de não encontrar nenhum resultado pra busca
 
 #DOING
-
+* Parte 11 - Buscas no Banco de dados
 
