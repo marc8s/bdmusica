@@ -119,14 +119,23 @@ include_once("connect.php");
 			<div id="bottom" class="row">
 				<div class="col-md-12">
 				<!--A quantidade de páginas depende de um cálculo sobre a quantidade de registros-->				
-					<ul class="pagination"><!--fazer os links href com back-end-->
-						<li class="disabled"><a>&lt; Anterior</a></li>
+					<!--<ul class="pagination"><!--fazer os links href com back-end-->
+						<!--<li class="disabled"><a>&lt; Anterior</a></li>
 						<li class="disabled"><a>1</a></li>
 						<li><a href="#">2</a></li>
 						<li><a href="#">3</a></li>
 						<li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
 					</ul><!-- /.pagination -->
-			 
+					<?php
+					if ($linhas > 0) {
+						echo '<ul class="pagination">';						
+						for ($n = 1; $n <= $paginas; $n++) {
+							echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";							
+					  }
+					}
+					echo "</ul><!-- /.pagination -->";
+					?>
+						
 				</div>
 			 
 			</div> <!-- /#bottom -->
