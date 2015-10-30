@@ -59,7 +59,7 @@ include_once("connect.php");
 			<hr />
 			<?php 
 			//registros por pagina
-			$por_pagina = 8;
+			$por_pagina = 3;
 			$resultado = $conexao->query("SELECT * FROM musicanaescola");
 			$linhas = $resultado->num_rows;			
 			//calcula o máximo de páginas
@@ -119,7 +119,8 @@ include_once("connect.php");
 			</div> <!-- /#list -->
 		 
 			<div id="bottom" class="row">
-				<div class="col-md-12">
+				<div class="col-md-4"></div>
+				<div class="col-md-4">
 				<!--A quantidade de páginas depende de um cálculo sobre a quantidade de registros-->				
 					<!--<ul class="pagination"><!--fazer os links href com back-end-->
 						<!--<li class="disabled"><a>&lt; Anterior</a></li>
@@ -131,21 +132,58 @@ include_once("connect.php");
 					<?php
 					if ($linhas > 0) {
 						echo '<ul class="pagination">';	
-						if($pagina != 1){
+						//CALCULO PARA A PAGINA SEGUINTE
+						/*if($pagina != 1){
 							$anterior = $pagina - 1;
 						}else{
 							$anterior = $pagina;
-						}
-						echo "<li><a href='index.php?pagina={$anterior}'>Anterior</a></li>";							
-						for ($n = 1; $n <= $paginas; $n++) {
+						}*/
+						echo "<li><a href='index.php?pagina=1'>Primeira</a></li>";	
+						//IMPRIME LINK PARA TODAS AS PAGINAS
+						/*for ($n = 1; $n <= $paginas; $n++) {
 							echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";							
+						}*/
+
+						$n = $pagina;
+						$limite = $pagina + 2;						
+						
+						if($n == 1 || $limite <= $paginas){
+							echo "<li><a href='#'>{$n}</a></li>";
+							if($pagina < $paginas){
+								$n = $pagina + 1;
+								echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";
+							}
+							if($n < $paginas){
+								$n = $n + 1;
+								echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";
+							}
+						}else{
+							if($limite == $paginas + 1){
+								$auxiliar = $n - 1;
+								echo "<li><a href='index.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
+								echo "<li><a href='#'>{$n}</a></li>";
+								if($pagina < $paginas){
+									$n = $pagina + 1;
+									echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";
+								}
+							}else{
+								if($limite == $paginas + 2){
+									$auxiliar = $n - 2;
+									echo "<li><a href='index.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
+									$auxiliar = $n - 1;
+									echo "<li><a href='index.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
+									echo "<li><a href='#'>{$n}</a></li>";									
+								}
+							}
+							
 						}
-						if($pagina < $paginas){
+						//IMPRIME LINK PARA A PAGINA SEGUINTE
+						/*if($pagina < $paginas){
 							$proximo = $pagina + 1;
 						}else{
 							$proximo = $pagina;
-						}
-						echo "<li><a href='index.php?pagina={$proximo}'>Próximo</a></li>";		
+						}*/
+						echo "<li><a href='index.php?pagina={$paginas}'>Última</a></li>";		
 					}
 					echo "</ul><!-- /.pagination -->";
 					?>
