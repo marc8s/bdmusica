@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -52,6 +55,14 @@
 
 			</div> <!-- /container -->
 		</div>
+	<p class="text-center text-danger">	
+		<?php	
+		if(isset($_SESSION['loginErro'])){
+			echo $_SESSION['loginErro'] ;
+			unset($_SESSION['loginErro']);
+		}
+		?>
+	</p>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
