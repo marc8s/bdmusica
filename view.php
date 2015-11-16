@@ -33,7 +33,7 @@ $row = $result->fetch_object();
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="index.php">Início</a></li>
 						<li><a href="#">Opções</a></li>
-						<li><a href="#">Perfil</a></li>
+						<li><a href="#">Teste</a></li>
 						<li><a href="#">Ajuda</a></li>
 					</ul>
 				</div>

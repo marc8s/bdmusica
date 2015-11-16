@@ -27,9 +27,9 @@ include_once("connect.php");
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="index.php">Início</a></li>
-						<li><a href="#">Opções</a></li>
-						<li><a href="#">Perfil</a></li>
-						<li><a href="#">Ajuda</a></li>
+						<li><a href="#">Sobre</a></li>
+						<li><a href="login.php">Login</a></li>
+						<li><a href="#">Contato</a></li>
 					</ul>
 				</div>
 			</div>

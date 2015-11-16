@@ -22,16 +22,35 @@
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.html">Início</a></li>
-						<li><a href="#">Opções</a></li>
-						<li><a href="#">Teste</a></li>
-						<li><a href="#">Ajuda</a></li>
+						<li><a href="index.php">Início</a></li>
+						<li><a href="#">Sobre</a></li>
+						<li><a href="#">Login</a></li>
+						<li><a href="#">Contato</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 		<div id="main" class="container-fluid">
-			<h3 class="page-header">Template Inicial</h3>
+			<h3 class="page-header text-center">Faça Login</h3>
+		</div>
+		<div class="row">
+			<div class="col-md-5"></div>
+			<div class="col-md-2">
+			  <form class="form-signin" method="POST" action="valida_login.php">
+				<!--<h2 class="form-signin-heading">Faça Login</h2>-->
+				<label for="inputEmail" class="sr-only">Email</label>
+				<input type="email" id="inputEmail" name ="email" class="form-control" placeholder="Email" required autofocus>
+				<label for="inputPassword" class="sr-only">Senha</label>
+				<input type="password" id="inputPassword" name ="senha" class="form-control" placeholder="Senha" required>
+				<div class="checkbox">
+				  <label>
+					<input type="checkbox" value="remember-me"> Lembre-me
+				  </label>
+				</div>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+			  </form>
+
+			</div> <!-- /container -->
 		</div>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
