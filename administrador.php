@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <?php
 session_start();
-include_once("connect.php");
+include_once("seguranca.php");
 
+if($_SESSION['email'] != ""){
+	include_once("connect.php");
 ?>
 <html lang="pt-br">
 	<head>
@@ -197,3 +199,5 @@ include_once("connect.php");
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
+
+<?php } ?>
