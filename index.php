@@ -41,7 +41,7 @@ include_once("connect.php");
 				
 				</div>			 
 				<div class="col-md-6">
-					<form action="busca.php" method="post">
+					<form action="busca_basic.php" method="post">
 						<div class="input-group h2" >
 							<input name="search" class="form-control" id="search" type="text" placeholder="Digite aqui o nome da Escola">
 							<span class="input-group-btn">

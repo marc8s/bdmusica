@@ -1,20 +1,15 @@
 <?php
-session_start();
-include_once("seguranca.php");
+$id = $_POST['search'];
+include_once("connect.php");
+//Executa consulta
+$result = $conexao->query("SELECT * FROM musicanaescola WHERE escola = '$id' LIMIT 1"); 
+$linhas = $result->num_rows;
 
-if($_SESSION['email'] != ""){
-	$id = $_POST['search'];
-	include_once("connect.php");
-	//Executa consulta
-	$result = $conexao->query("SELECT * FROM musicanaescola WHERE escola = '$id' LIMIT 1"); 
-	$linhas = $result->num_rows;
-
-	if($linhas == 0){
-		$url = 'mensagemErroBusca.html';
-		echo'<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$url.'">';
-	}else{
-		$row = $result->fetch_object(); 
-?>
+if($linhas == 0){
+	$url = 'mensagemErroBusca.html';
+	echo'<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$url.'">';
+}else{
+	$row = $result->fetch_object(); ?>
 	<!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -39,7 +34,7 @@ if($_SESSION['email'] != ""){
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="administrador.php">Início</a></li>
+						<li><a href="index.php">Início</a></li>
 						<li><a href="#">Sobre</a></li>
 						<li><a href="#">Contato</a></li>
 						<li><a href="login.php">Sair</a></li>
@@ -72,9 +67,8 @@ if($_SESSION['email'] != ""){
 			<hr />
 			<div id="actions" class="row">
 				<div class="col-md-12">
-					<a href="administrador.php" class="btn btn-success">Voltar</a>
-					<a href="edit.php?id=<?php echo $row->Identificador; ?>" class="btn btn-primary">Editar</a>					
-					<a class="btn btn-danger"  href="del.php?id=<?php echo $row->Identificador; ?>">Excluir</a>
+					<a href="index.php" class="btn btn-success">Voltar</a>
+					
 				</div>
 			</div>
 		</div>
@@ -82,7 +76,7 @@ if($_SESSION['email'] != ""){
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
-<?php } }
+<?php }
 
 
 
