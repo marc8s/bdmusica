@@ -14,13 +14,15 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Parte 10 - Exclusão do banco de dados
 * Parte 11 - Buscas no Banco de dados
 * Parte 12 - Paginação
+* Parte 13 - Criar área administrativa e Tratar da segurança 
 
 # TO DO 
 * Colocar campos corretos do formulário 
 * Conectar com o banco de dados online
+* Criar Página Sobre com informações do projeto
+* Criar página de contato
 
 #DOING
 
-* Parte 13 - Criar área administrativa e Tratar da segurança 
 
 
