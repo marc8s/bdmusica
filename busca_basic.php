@@ -1,4 +1,5 @@
 <?php
+session_start();
 $id = $_POST['search'];
 include_once("connect.php");
 //Executa consulta
@@ -6,7 +7,8 @@ $result = $conexao->query("SELECT * FROM musicanaescola WHERE escola = '$id' LIM
 $linhas = $result->num_rows;
 
 if($linhas == 0){
-	$url = 'mensagemErroBusca.html';
+	$_SESSION['update'] = "Cadastro não encontrado!";
+	$url = 'index.php';
 	echo'<META HTTP-EQUIV=Refresh CONTENT="0; URL='.$url.'">';
 }else{
 	$row = $result->fetch_object(); ?>

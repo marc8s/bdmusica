@@ -59,6 +59,14 @@ if($_SESSION['email'] != ""){
 					<a href="add.php" class="btn btn-primary pull-right h2">Novo Item</a>
 				</div>
 			</div> <!-- /#top -->
+			<p class="text-center text-danger">	
+		<?php	
+		if(isset($_SESSION['update'])){
+			echo $_SESSION['update'] ;
+			unset($_SESSION['update']);
+		}
+		?>
+		</p>
 			<hr />
 			<?php 
 			//registros por pagina
@@ -195,6 +203,7 @@ if($_SESSION['email'] != ""){
 			 
 			</div> <!-- /#bottom -->
 		</div>
+		
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>

@@ -56,6 +56,15 @@ include_once("connect.php");
 					<!--<a href="add.html" class="btn btn-primary pull-right h2">Novo Item</a>-->
 				</div>
 			</div> <!-- /#top -->
+						<p class="text-center text-danger">	
+			<?php	
+			if(isset($_SESSION['update'])){
+				echo $_SESSION['update'] ;
+				unset($_SESSION['update']);
+			}
+			?>
+			</p>
+
 			<hr />
 			<?php 
 			//registros por pagina
