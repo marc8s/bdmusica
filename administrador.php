@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <?php
+session_start();
 include_once("connect.php");
 
 ?>
@@ -26,10 +27,10 @@ include_once("connect.php");
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.php">Início</a></li>
-						<li><a href="#">Sobre</a></li>
-						<li><a href="login.php">Login</a></li>
+						<li><a href="administrador.php">Início</a></li>
+						<li><a href="#">Sobre</a></li>						
 						<li><a href="#">Contato</a></li>
+						<li><a href="login.php">Sair</a></li>
 					</ul>
 				</div>
 			</div>
@@ -138,7 +139,7 @@ include_once("connect.php");
 						}else{
 							$anterior = $pagina;
 						}*/
-						echo "<li><a href='index.php?pagina=1'>Primeira</a></li>";	
+						echo "<li><a href='administrador.php?pagina=1'>Primeira</a></li>";	
 						//IMPRIME LINK PARA TODAS AS PAGINAS
 						/*for ($n = 1; $n <= $paginas; $n++) {
 							echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";							
@@ -151,27 +152,27 @@ include_once("connect.php");
 							echo "<li><a href='#'>{$n}</a></li>";
 							if($pagina < $paginas){
 								$n = $pagina + 1;
-								echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";
+								echo "<li><a href='administrador.php?pagina={$n}'>{$n}</a></li>";
 							}
 							if($n < $paginas){
 								$n = $n + 1;
-								echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";
+								echo "<li><a href='administrador.php?pagina={$n}'>{$n}</a></li>";
 							}
 						}else{
 							if($limite == $paginas + 1){
 								$auxiliar = $n - 1;
-								echo "<li><a href='index.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
+								echo "<li><a href='administrador.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
 								echo "<li><a href='#'>{$n}</a></li>";
 								if($pagina < $paginas){
 									$n = $pagina + 1;
-									echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";
+									echo "<li><a href='administrador.php?pagina={$n}'>{$n}</a></li>";
 								}
 							}else{
 								if($limite == $paginas + 2){
 									$auxiliar = $n - 2;
-									echo "<li><a href='index.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
+									echo "<li><a href='administrador.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
 									$auxiliar = $n - 1;
-									echo "<li><a href='index.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
+									echo "<li><a href='administrador.php?pagina={$auxiliar}'>{$auxiliar}</a></li>";
 									echo "<li><a href='#'>{$n}</a></li>";									
 								}
 							}
@@ -183,7 +184,7 @@ include_once("connect.php");
 						}else{
 							$proximo = $pagina;
 						}*/
-						echo "<li><a href='index.php?pagina={$paginas}'>Última</a></li>";		
+						echo "<li><a href='administrador.php?pagina={$paginas}'>Última</a></li>";		
 					}
 					echo "</ul><!-- /.pagination -->";
 					?>
