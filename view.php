@@ -74,6 +74,14 @@ if($_SESSION['email'] != ""){
 				</div>
 			</div>
 		</div>
+		<p class="text-center text-success">	
+		<?php	
+		if(isset($_SESSION['update'])){
+			echo $_SESSION['update'] ;
+			unset($_SESSION['update']);
+		}
+		?>
+	</p>
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>

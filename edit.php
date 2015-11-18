@@ -1,9 +1,13 @@
 <?php
-$id = $_GET['id'];
-include_once("connect.php");
-//Executa consulta
-$result = $conexao->query("SELECT * FROM musicanaescola WHERE identificador = '$id' LIMIT 1"); 
-$row = $result->fetch_object();
+session_start();
+include_once("seguranca.php");
+
+if($_SESSION['email'] != ""){
+	$id = $_GET['id'];
+	include_once("connect.php");
+	//Executa consulta
+	$result = $conexao->query("SELECT * FROM musicanaescola WHERE identificador = '$id' LIMIT 1"); 
+	$row = $result->fetch_object();
 
 ?>
 
@@ -31,10 +35,10 @@ $row = $result->fetch_object();
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.php">Início</a></li>
-						<li><a href="#">Opções</a></li>
-						<li><a href="#">Perfil</a></li>
-						<li><a href="#">Ajuda</a></li>
+						<li><a href="administrador.php">Início</a></li>
+						<li><a href="#">Sobre</a></li>
+						<li><a href="#">Contato</a></li>
+						<li><a href="login.php">Sair</a></li>
 					</ul>
 				</div>
 			</div>
@@ -66,13 +70,16 @@ $row = $result->fetch_object();
 				<hr />
 				<div id="actions" class="row">
 					<div class="col-md-12">
-						<button type="submit" class="btn btn-primary">Salvar</button>
-						<a href="index.php" class="btn btn-default">Cancelar</a>
+						<button type="submit" class="btn btn-primary">Salvar </button>
+						<a href="administrador.php" class="btn btn-default">Cancelar</a>
 					</div>
 				</div>
+				
 			</form>
 		</div>
+		
 		<script src="js/jquery.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
+<?php } ?>

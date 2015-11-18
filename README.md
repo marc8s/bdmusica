@@ -18,10 +18,9 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 # TO DO 
 * Colocar campos corretos do formulário 
 * Conectar com o banco de dados online
-* Parte 13 - tratar da segurança 
 
 #DOING
 
-* Parte 13 - Criar área administrativa
+* Parte 13 - Criar área administrativa e Tratar da segurança 
 
 
