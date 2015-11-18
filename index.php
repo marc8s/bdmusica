@@ -27,21 +27,20 @@ include_once("connect.php");
 				</div>
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="index.php">Início</a></li>
-						<li><a href="#">Sobre</a></li>
-						<li><a href="login.php">Login</a></li>
+						<li><a href="#">Início</a></li>
+						<li><a href="#">Sobre</a></li>						
 						<li><a href="#">Contato</a></li>
+						<li><a href="login.php">Login</a></li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		<div id="main" class="container-fluid">
-			<!--<h3 class="page-header">Página Inicial</h3> -->
+		<div id="main" class="container-fluid">			
 			<div id="top" class="row">
 				<div class="col-md-3">
-				<!--	<h2>Itens</h2>-->
+				
 				</div>			 
-				<div class="col-md-6"><!--implementar requisição de busca com ajax-->
+				<div class="col-md-6">
 					<form action="busca.php" method="post">
 						<div class="input-group h2" >
 							<input name="search" class="form-control" id="search" type="text" placeholder="Digite aqui o nome da Escola">
@@ -103,9 +102,8 @@ include_once("connect.php");
 									echo "<td>".$row->Telefone."</td>";
 									?>
 									<td class="actions">
-										<a class="btn btn-success btn-xs" href="view.php?id=<?php echo $row->Identificador; ?>">Visualizar</a> 
-										<a class="btn btn-warning btn-xs" href="edit.php?id=<?php echo $row->Identificador; ?>">Editar</a> 
-										<a class="btn btn-danger btn-xs"  href="del.php?id=<?php echo $row->Identificador; ?>">Excluir</a>
+										<a class="btn btn-success btn-xs" href="view_basic.php?id=<?php echo $row->Identificador; ?>">Visualizar</a> 
+										
 									</td>
 									<?php
 									
