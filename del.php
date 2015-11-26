@@ -68,7 +68,7 @@ if($_SESSION['email'] != ""){
 			<hr />
 			<div id="actions" class="row">
 				<div class="col-md-12">
-					<a href="view.php" class="btn btn-success">Cancelar</a>
+					<a href="view.php?id=<?php echo $row->Identificador; ?>" class="btn btn-success">Cancelar</a>
 					<a href="edit.php?id=<?php echo $row->Identificador; ?>" class="btn btn-primary">Editar</a>					
 					<a href="delete.php?id=<?php echo $row->Identificador; ?>" class="btn btn-default btn-danger">Excluir</a>
 				</div>
