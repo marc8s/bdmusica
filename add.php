@@ -49,10 +49,10 @@ if($_SESSION['email'] != ""){
 					   <label for="campo2">Cidade</label>
 					   <input type="text" class="form-control" name="campo2" id="campo2">
 					</div>
-					<div class="form-group col-md-4">
+					<!-- <div class="form-group col-md-4">
 					   <label for="campo3">Identificador</label>
 					   <input type="number" class="form-control" name="campo3" id="campo3">
-					</div>
+					</div>-->
 				</div>
 				<div class="row">
 					<div class="form-group col-md-4">

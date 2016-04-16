@@ -105,7 +105,7 @@ if($_SESSION['email'] != ""){
 						</thead>
 						<tbody>	
 							<?php 
-							while($row = $resultado->fetch_object()){
+							while($row = $resultado->fetch_object()){ 
 								echo "<tr>";
 									echo "<td>".$row->Identificador."</td>";
 									echo "<td>".$row->Escola."</td>";
