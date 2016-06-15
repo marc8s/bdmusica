@@ -38,7 +38,7 @@ if($_SESSION['email'] != ""){
 		</nav>
 		<div id="main" class="container-fluid">
 			<h3 class="page-header">Práticas de Ensinar Música </h3>
-			<form method="post" action="insert.php"> 
+			<form method="post" action="insertquestionario.php"> 
 				<!-- area de campos do form -->
 				<div class="row">
 					<div class="form-group col-md-6">
