@@ -18,8 +18,7 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 * Parte 14 - Criar tabela com campos corretos do formulário
 * Parte 15 - Criar tela de adição com campos corretos do questionário 
 
-# TO DO 
-* Comunicação da adição com o banco de dados
+# TO DO
 * Conectar com o banco de dados online
 * Criar Página Sobre com informações do projeto
 * Criar página de contato

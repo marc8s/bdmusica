@@ -57,6 +57,7 @@ if($_SESSION['email'] != ""){
 				</div>			 
 				<div class="col-md-3">
 					<a href="add.php" class="btn btn-primary pull-right h2">Novo Item</a>
+					<a href="questionario.php" class="btn btn-primary pull-right h2">Novo Questionário</a>
 				</div>
 			</div> <!-- /#top -->
 			<p class="text-center text-danger">	
