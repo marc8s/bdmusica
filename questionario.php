@@ -13,6 +13,9 @@ if($_SESSION['email'] != ""){
 		<title>Adicionar Escola</title>		 
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
+
+
+
 	</head>
 	<body> 
 		<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -46,8 +49,8 @@ if($_SESSION['email'] != ""){
 					   <input type="text" class="form-control" name="campo1" id="campo1">
 					</div>	
 					<div class="form-group col-md-3">
-					   <label>Data</label>
-					   <input type="number" class="form-control" name="campo2" id="campo2">
+					   <label>Data</label>					   
+					   <input type="text" class="form-control" name="campo2" id="campo2" placeholder="dd/mm/aaaa">
 					</div>				 
 					<div class="form-group col-md-3">
 					   <label >Cidade</label>
@@ -860,4 +863,9 @@ if($_SESSION['email'] != ""){
 		<script src="js/bootstrap.min.js"></script>
 	</body>
 </html>
+
+
+
+
+
 <?php } ?>
