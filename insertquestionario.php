@@ -15,6 +15,9 @@ if($_SESSION['email'] != ""){
 
 	}
 	$q2_outros = $_POST['q2_outros'];
+	if (empty($q2_outros)) {
+	  $q2_outros = "Não informado";
+	}
 	$q3 = $_POST['q3'];
 	$q4 = $_POST['q4'];
 	$q5 = $_POST['q5'];
@@ -23,19 +26,40 @@ if($_SESSION['email'] != ""){
 		$q5_1 .= $q51item.",";
 
 	}	
+	if (empty($q5_1)) {
+	  $q5_1 = "Não se aplica";
+	}
 	foreach($_POST['q5_2'] AS $q52item){
 
 		$q5_2 .= $q52item.",";
 
 	}	
+	if (empty($q5_2)) {
+	  $q5_2 = "Não se aplica";
+	}
 	$q5_2_outros = $_POST['q5_2_outros'];
+	if (empty($q5_2_outros)) {
+	  $q5_2_outros = "Não informado";
+	}
 	$q6 = $_POST['q6'];
 	$q6_1 = $_POST['q6_1'];
+	if (empty($q6_1)) {
+	  $q6_1 = "Não se aplica";
+	}
 	$q7 = $_POST['q7'];
 	$q7_1 = $_POST['q7_1'];
+	if (empty($q7_1)) {
+	  $q7_1 = "Não se aplica";
+	}
 	$q7_2 = $_POST['q7_2'];
+	if (empty($q7_2)) {
+	  $q7_2 = "Não se aplica";
+	}
 	$q8 = $_POST['q8'];
 	$q8_1 = $_POST['q8_1'];
+	if (empty($q8_1)) {
+	  $q8_1 = "Não se aplica";
+	}
 	$q9_1a = $_POST['q9_1a'];
 	$q9_1b = $_POST['q9_1b'];
 	$q9_1c = $_POST['q9_1c'];
@@ -54,7 +78,10 @@ if($_SESSION['email'] != ""){
 	$q9_6a = $_POST['q9_6a'];
 	$q9_6b = $_POST['q9_6b'];
 	$q9_6c = $_POST['q9_6c'];
-	$q9_complemento = $_POST['q9_complemento'];
+	$q9_complemento = $_POST['q9_complemento'];	
+	if (empty($q9_complemento)) {
+	  $q9_complemento = "Não informado";
+	}
 	$q10_1a = $_POST['q10_1a'];
 	$q10_1b = $_POST['q10_1b'];
 	$q10_2a = $_POST['q10_2a'];
@@ -90,6 +117,9 @@ if($_SESSION['email'] != ""){
 	$q10_12b = $_POST['q10_12b'];
 	$q10_12c = $_POST['q10_12c'];
 	$q10_complemento = $_POST['q10_complemento'];
+	if (empty($q10_complemento)) {
+	  $q10_complemento = "Não informado";
+	}
 	$q11 = $_POST['q11'];
 	$q11_1 = $_POST['q11_1'];
 	$q12 = $_POST['q12'];
