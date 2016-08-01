@@ -56,8 +56,7 @@ if($_SESSION['email'] != ""){
 					</form>
 				</div>			 
 				<div class="col-md-3">
-					<a href="add.php" class="btn btn-primary pull-right h2">Novo Item</a>
-					<a href="add1.php" class="btn btn-primary pull-right h2">Add1</a>
+					<a href="add.php" class="btn btn-primary pull-right h2">Novo Item</a>					
 					<a href="questionario.php" class="btn btn-primary pull-right h2">Novo Questionário</a>
 				</div>
 			</div> <!-- /#top -->
