@@ -9,13 +9,25 @@ if($_SESSION['email'] != ""){
 	$data = $_POST['campo2'];	
 	$cidade = $_POST['campo3'];	
 	$q1 = $_POST['q1'];	
-	$q2 = $_POST['q2'];
+	foreach($_POST['q2'] AS $q2item){
+
+		$q2 .= $q2item.",";
+
+	}
 	$q2_outros = $_POST['q2_outros'];
 	$q3 = $_POST['q3'];
 	$q4 = $_POST['q4'];
 	$q5 = $_POST['q5'];
-	$q5_1 = $_POST['q5_1'];
-	$q5_2 = $_POST['q5_2'];
+	foreach($_POST['q5_1'] AS $q51item){
+
+		$q5_1 .= $q51item.",";
+
+	}	
+	foreach($_POST['q5_2'] AS $q52item){
+
+		$q5_2 .= $q52item.",";
+
+	}	
 	$q5_2_outros = $_POST['q5_2_outros'];
 	$q6 = $_POST['q6'];
 	$q6_1 = $_POST['q6_1'];

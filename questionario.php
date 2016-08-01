@@ -78,19 +78,19 @@ if($_SESSION['email'] != ""){
 					<div class="form-group col-md-9">
 						<label>2) Nas suas aulas de Arte, predomina o trabalho com qual(is) modalidade(s) artística(s)? Você pode marcar mais de uma opção.</label>
 						<div class="checkbox">
-							<label><input type="checkbox" name="q2" id="q2" value="Música">Música</label>
+							<label><input type="checkbox" name="q2[]" id="q2" value="Música">Música</label>
 						</div>
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q2" id="q2" value="Teatro">Teatro</label>
+						    <label><input type="checkbox" name="q2[]" id="q2" value="Teatro">Teatro</label>
 						</div>
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q2" id="q2" value="Artes Visuais">Artes Visuais</label>
+						    <label><input type="checkbox" name="q2[]" id="q2" value="Artes Visuais">Artes Visuais</label>
 						</div>	
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q2" id="q2" value="Dança">Dança</label>
+						    <label><input type="checkbox" name="q2[]" id="q2" value="Dança">Dança</label>
 						</div>
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q2" id="q2" value="Outros">Outros</label>
+						    <label><input type="checkbox" name="q2[]" id="q2" value="Outros">Outros</label>
 						     <input type="text" class="form-control" name="q2_outros" id="q2_outros">
 						</div>						
 					</div>
@@ -132,10 +132,10 @@ if($_SESSION['email'] != ""){
 					<div class="form-group col-md-8">
 					   <label >5.1) Se respondeu "Sim" para a questão anterior, especifique:</label>
 					   <div class="checkbox">
-							<label><input type="checkbox" name="q5_1" id="q5_1" value="Licenciatura">Licenciatura</label>
+							<label><input type="checkbox" name="q5_1[]" id="q5_1" value="Licenciatura">Licenciatura</label>
 						</div>
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q5_1" id="q5_1" value="Bacharelado">Bacharelado</label>
+						    <label><input type="checkbox" name="q5_1[]" id="q5_1" value="Bacharelado">Bacharelado</label>
 						</div>
 					</div>					
 				</div>
@@ -143,19 +143,19 @@ if($_SESSION['email'] != ""){
 					<div class="form-group col-md-9">
 						<label>5.2) Em que modalidade artística?</label>
 						<div class="checkbox">
-							<label><input type="checkbox" name="q5_2" id="q5_2" value="Música">Música</label>
+							<label><input type="checkbox" name="q5_2[]" id="q5_2" value="Música">Música</label>
 						</div>
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q5_2" id="q5_2" value="Teatro">Teatro</label>
+						    <label><input type="checkbox" name="q5_2[]" id="q5_2" value="Teatro">Teatro</label>
 						</div>
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q5_2" id="q5_2" value="Artes Visuais">Artes Visuais</label>
+						    <label><input type="checkbox" name="q5_2[]" id="q5_2" value="Artes Visuais">Artes Visuais</label>
 						</div>	
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q5_2" id="q5_2" value="Dança">Dança</label>
+						    <label><input type="checkbox" name="q5_2[]" id="q5_2" value="Dança">Dança</label>
 						</div>
 						<div class="checkbox">
-						    <label><input type="checkbox" name="q5_2" id="q5_2" value="Outros">Outros</label>
+						    <label><input type="checkbox" name="q5_2[]" id="q5_2" value="Outros">Outros</label>
 						     <input type="text" class="form-control" name="q5_2_outros" id="q5_2_outros">
 						</div>						
 					</div>
