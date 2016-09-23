@@ -40,7 +40,7 @@ if($_SESSION['email'] != ""){
 		<div id="main" class="container-fluid">
 			<!--<h3 class="page-header">Página Inicial</h3> -->
 			<div id="top" class="row">
-				<div class="col-md-3">
+				<div class="col-md-2">
 				<!--	<h2>Itens</h2>-->
 				</div>			 
 				<div class="col-md-6"><!--implementar requisição de busca com ajax-->
@@ -55,9 +55,12 @@ if($_SESSION['email'] != ""){
 						</div>
 					</form>
 				</div>			 
-				<div class="col-md-3">
-					<a href="add.php" class="btn btn-primary pull-right h2">Novo Item</a>					
-					<a href="questionario.php" class="btn btn-primary pull-right h2">Novo Questionário</a>
+				<div class="col-md-2">
+					<!-- <a href="add.php" class="btn btn-primary pull-right h2">Novo Item</a>	-->				
+					<a href="questionario.php" class="btn btn-primary pull-right h2">Novo Questionário</a>					
+				</div>
+				<div class="col-md-2">					
+					<a href="download.php" class="btn btn-primary pull-right h2">Download Tabela</a>
 				</div>
 			</div> <!-- /#top -->
 			<p class="text-center text-danger">	

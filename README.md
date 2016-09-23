@@ -20,9 +20,8 @@ Implementação de um CRUD para o projeto de pesquisa "Música na escola: invest
 
 # TO DO
 * Dinamizar campos do formulário que são dependentes
-* Conectar com o banco de dados online
 * Criar Página Sobre com informações do projeto
-* Criar página de contato
+* Exibir dados do questionário correto
 
 #DOING
 * Permitir Download da base de dados em uma tabela excel
