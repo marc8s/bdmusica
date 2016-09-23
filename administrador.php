@@ -75,7 +75,7 @@ if($_SESSION['email'] != ""){
 			<?php 
 			//registros por pagina
 			$por_pagina = 3;
-			$resultado = $conexao->query("SELECT * FROM musicanaescola");
+			$resultado = $conexao->query("SELECT * FROM questionario");
 			$linhas = $resultado->num_rows;			
 			//calcula o máximo de páginas
 			$paginas =  (($linhas % $por_pagina) > 0) ? (int)($linhas / $por_pagina) + 1 : ($linhas / $por_pagina);
@@ -90,7 +90,7 @@ if($_SESSION['email'] != ""){
 			$offset = ($pagina - 1) * $por_pagina;
 			//****************************************
 			// Monta outra consulta MySQL, agora a que fará a busca com paginação
-			$resultado = $conexao->query("SELECT * FROM musicanaescola LIMIT $offset, $por_pagina");
+			$resultado = $conexao->query("SELECT * FROM questionario LIMIT $offset, $por_pagina");
 			// Número máximos de botões de paginação 
 			$max_links = 3;
 
@@ -102,8 +102,7 @@ if($_SESSION['email'] != ""){
 							<tr>
 								<th>ID</th>
 								<th>Escola</th>
-								<th>Cidade</th>
-								<th>Telefone</th>
+								<th>Cidade</th>								
 								<th class="actions">Ações</th>
 							 </tr>
 						</thead>
@@ -111,21 +110,19 @@ if($_SESSION['email'] != ""){
 							<?php 
 							while($row = $resultado->fetch_object()){ 
 								echo "<tr>";
-									echo "<td>".$row->Identificador."</td>";
-									echo "<td>".$row->Escola."</td>";
-									echo "<td>".$row->Cidade."</td>";
-									echo "<td>".$row->Telefone."</td>";
+									echo "<td>".$row->id."</td>";
+									echo "<td>".$row->escola."</td>";
+									echo "<td>".$row->cidade."</td>";									
 									?>
 									<td class="actions">
-										<a class="btn btn-success btn-xs" href="view.php?id=<?php echo $row->Identificador; ?>">Visualizar</a> 
-										<a class="btn btn-warning btn-xs" href="edit.php?id=<?php echo $row->Identificador; ?>">Editar</a> 
-										<a class="btn btn-danger btn-xs"  href="del.php?id=<?php echo $row->Identificador; ?>">Excluir</a>
+										<a class="btn btn-success btn-xs" href="view.php?id=<?php echo $row->id; ?>">Visualizar</a> 
+										<a class="btn btn-warning btn-xs" href="edit.php?id=<?php echo $row->id; ?>">Editar</a> 
+										<a class="btn btn-danger btn-xs"  href="del.php?id=<?php echo $row->id; ?>">Excluir</a>
 									</td>
 									<?php
 									
 								echo "</tr>";								
-							}
-							//$conexao->close();
+							}							
 							?>
 						</tbody>
 					</table>
@@ -135,30 +132,12 @@ if($_SESSION['email'] != ""){
 		 
 			<div id="bottom" class="row">
 				<div class="col-md-4"></div>
-				<div class="col-md-4">
-				<!--A quantidade de páginas depende de um cálculo sobre a quantidade de registros-->				
-					<!--<ul class="pagination"><!--fazer os links href com back-end-->
-						<!--<li class="disabled"><a>&lt; Anterior</a></li>
-						<li class="disabled"><a>1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li class="next"><a href="#" rel="next">Próximo &gt;</a></li>
-					</ul><!-- /.pagination -->
+				<div class="col-md-4">				
 					<?php
 					if ($linhas > 0) {
-						echo '<ul class="pagination">';	
-						//CALCULO PARA A PAGINA SEGUINTE
-						/*if($pagina != 1){
-							$anterior = $pagina - 1;
-						}else{
-							$anterior = $pagina;
-						}*/
+						echo '<ul class="pagination">';						
 						echo "<li><a href='administrador.php?pagina=1'>Primeira</a></li>";	
-						//IMPRIME LINK PARA TODAS AS PAGINAS
-						/*for ($n = 1; $n <= $paginas; $n++) {
-							echo "<li><a href='index.php?pagina={$n}'>{$n}</a></li>";							
-						}*/
-
+						
 						$n = $pagina;
 						$limite = $pagina + 2;						
 						
@@ -192,12 +171,7 @@ if($_SESSION['email'] != ""){
 							}
 							
 						}
-						//IMPRIME LINK PARA A PAGINA SEGUINTE
-						/*if($pagina < $paginas){
-							$proximo = $pagina + 1;
-						}else{
-							$proximo = $pagina;
-						}*/
+						
 						echo "<li><a href='administrador.php?pagina={$paginas}'>Última</a></li>";		
 					}
 					echo "</ul><!-- /.pagination -->";
