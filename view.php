@@ -70,6 +70,7 @@ if($_SESSION['email'] != ""){
 					<div class="form-group col-md-9">
 						<label>2) Nas suas aulas de Arte, predomina o trabalho com qual(is) modalidade(s) artística(s)? Você pode marcar mais de uma opção.</label>
 						<p><?php echo $row->q2; ?></p>
+						<label >Outros? </label>
 						<p><?php echo $row->q2_outros; ?></p>	
 					</div>
 				</div>
@@ -101,6 +102,7 @@ if($_SESSION['email'] != ""){
 					<div class="form-group col-md-9">
 						<label>5.2) Em que modalidade artística?</label>
 						<p><?php echo $row->q5_2; ?></p>
+						<label >Outros? </label>
 						<p><?php echo $row->q5_2_outros; ?></p>					
 					</div>
 				</div>
