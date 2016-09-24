@@ -69,7 +69,7 @@ include_once("connect.php");
 			<?php 
 			//registros por pagina
 			$por_pagina = 3;
-			$resultado = $conexao->query("SELECT * FROM musicanaescola");
+			$resultado = $conexao->query("SELECT * FROM questionario");
 			$linhas = $resultado->num_rows;			
 			//calcula o máximo de páginas
 			$paginas =  (($linhas % $por_pagina) > 0) ? (int)($linhas / $por_pagina) + 1 : ($linhas / $por_pagina);
@@ -84,7 +84,7 @@ include_once("connect.php");
 			$offset = ($pagina - 1) * $por_pagina;
 			//****************************************
 			// Monta outra consulta MySQL, agora a que fará a busca com paginação
-			$resultado = $conexao->query("SELECT * FROM musicanaescola LIMIT $offset, $por_pagina");
+			$resultado = $conexao->query("SELECT * FROM questionario LIMIT $offset, $por_pagina");
 			// Número máximos de botões de paginação 
 			$max_links = 3;
 
@@ -96,8 +96,7 @@ include_once("connect.php");
 							<tr>
 								<th>ID</th>
 								<th>Escola</th>
-								<th>Cidade</th>
-								<th>Telefone</th>
+								<th>Cidade</th>	
 								<th class="actions">Ações</th>
 							 </tr>
 						</thead>
@@ -105,13 +104,12 @@ include_once("connect.php");
 							<?php 
 							while($row = $resultado->fetch_object()){
 								echo "<tr>";
-									echo "<td>".$row->Identificador."</td>";
-									echo "<td>".$row->Escola."</td>";
-									echo "<td>".$row->Cidade."</td>";
-									echo "<td>".$row->Telefone."</td>";
+									echo "<td>".$row->id."</td>";
+									echo "<td>".$row->escola."</td>";
+									echo "<td>".$row->cidade."</td>";
 									?>
 									<td class="actions">
-										<a class="btn btn-success btn-xs" href="view_basic.php?id=<?php echo $row->Identificador; ?>">Visualizar</a> 
+										<a class="btn btn-success btn-xs" href="view_basic.php?id=<?php echo $row->id; ?>">Visualizar</a> 
 										
 									</td>
 									<?php
