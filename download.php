@@ -8,7 +8,7 @@
 	}
 
 	// Nome do Arquivo do Excel que será gerado
-	$arquivo = 'questionario.xls';
+	$arquivo = 'dadosmusicanaescola.xls';
 
 	// Criamos uma tabela HTML com o formato da planilha para excel
 	$tabela = '<table border="1">';
