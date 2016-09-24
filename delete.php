@@ -6,7 +6,7 @@ if($_SESSION['email'] != ""){
 	$id = $_GET['id'];
 	include_once("connect.php");
 
-	$sql = "DELETE FROM musicanaescola WHERE Identificador = $id";
+	$sql = "DELETE FROM questionario WHERE id = $id";
 	//$sql .= "( Escola ='$escola', Cidade ='$cidade', Identificador= '$identificador', Telefone='$telefone')";
 	$conexao->query($sql);
 	$conexao->close();
