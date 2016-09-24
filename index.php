@@ -37,10 +37,10 @@ include_once("connect.php");
 		</nav>
 		<div id="main" class="container-fluid">			
 			<div id="top" class="row">
-				<div class="col-md-3">
-				
+				<div class="col-md-2">
+				<!--	<h2>Itens</h2>-->
 				</div>			 
-				<div class="col-md-6">
+				<div class="col-md-6"><!--implementar requisição de busca com ajax-->
 					<form action="busca_basic.php" method="post">
 						<div class="input-group h2" >
 							<input name="search" class="form-control" id="search" type="text" placeholder="Digite aqui o nome da Escola">
@@ -52,8 +52,9 @@ include_once("connect.php");
 						</div>
 					</form>
 				</div>			 
-				<div class="col-md-3">
-					<!--<a href="add.html" class="btn btn-primary pull-right h2">Novo Item</a>-->
+				
+				<div class="col-md-4">					
+					<a href="download.php" class="btn btn-primary pull-right h2">Download Tabela</a>
 				</div>
 			</div> <!-- /#top -->
 						<p class="text-center text-danger">	
